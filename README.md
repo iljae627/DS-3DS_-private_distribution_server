@@ -1,5 +1,8 @@
 # DS-3DS_-private_distribution_server
 
+# 프로젝트 계기
+https://manatails.net/blog/2016/03/hacking-pokemon-6th-gen-mystery-gift-server/
+
 Phase / 기간,핵심 목표 (Milestone),세부 Task (연구 및 코딩),비고 (페이스 조절)
 Phase 1(7.15 ~ 8.15),DS 배포 시스템 완벽 통제(여름방학 개발 집중),- ultimate_myg_maker.py 모듈화 및 예외 처리- PK4 포켓몬 바이너리(136 bytes) 파서 개발- DNS/HTTPS 서버 자동 실행 스크립트 작성,방학 기간을 활용한가장 헤비한 코딩 주간
 Phase 2(8.16 ~ 9.30),3DS 네트워크 리서치(개강 및 리서치 전환),"- 3DS SpotPass / Boss 프로토콜 패킷 캡처 및 구조 분석- 닌텐도 서버 통신 암호화 해제(Decryption) 원리 연구- 6/7세대 소포 파일(.wc6, .wc7) 헥스 데이터 구조 파악",코딩보다는 리서치 중심.전공 공부와 병행하기 좋음

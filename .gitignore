@@ -216,3 +216,33 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local game assets, credentials, captures and downloaded dependencies
+*.nds
+*.3ds
+*.cia
+*.sav
+*.dsv
+*.pk4
+*.pkm
+*.pcd
+*.pgf
+*.myg
+*.pem
+*.key
+*.pfx
+*.pcap
+*.pcapng
+*.etl
+*.bak
+/data/
+/logs/
+/reference/
+/samples/
+/지울것/
+/server/tls/
+/server/dlc/
+/tools/DS/
+/tools/melonDS-*/
+**/bin/
+**/obj/

@@ -1,0 +1,25 @@
+{
+  "bind_ip": "0.0.0.0",
+  "http_port": 80,
+  "https_port": 443,
+  "enable_legacy_https": true,
+  "tls_cert": "server/tls/dls1-cert.pem",
+  "tls_key": "server/tls/dls1-key.pem",
+  "dns_bind_ip": "auto",
+  "dns_port": 53,
+  "upstream_dns": "178.62.43.212",
+  "upstream_dns_port": 53,
+  "fixed_dns_records": {
+    "nas.nintendowifi.net": "178.62.43.212",
+    "conntest.nintendowifi.net": "178.62.43.212"
+  },
+  "public_ip": "auto",
+  "capture_raw": true,
+  "admin_loopback_only": true,
+  "local_clients_only": true,
+  "override_domains": [
+    "gamestats2.gs.nintendowifi.net",
+    "dls1.nintendowifi.net",
+    "dls1.ilostmymind.xyz"
+  ]
+}

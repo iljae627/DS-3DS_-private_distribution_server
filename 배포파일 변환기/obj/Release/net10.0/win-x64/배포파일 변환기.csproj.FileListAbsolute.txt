@@ -1,0 +1,17 @@
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\bin\Release\net10.0\win-x64\배포파일 변환기.exe
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\bin\Release\net10.0\win-x64\배포파일 변환기.deps.json
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\bin\Release\net10.0\win-x64\배포파일 변환기.runtimeconfig.json
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\bin\Release\net10.0\win-x64\배포파일 변환기.dll
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\bin\Release\net10.0\win-x64\배포파일 변환기.pdb
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\bin\Release\net10.0\win-x64\PKHeX.Core.dll
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.csproj.AssemblyReference.cache
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.AssemblyInfoInputs.cache
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.AssemblyInfo.cs
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.csproj.CoreCompileInputs.cache
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.csproj.Up2Date
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.dll
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\refint\배포파일 변환기.dll
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.pdb
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\배포파일 변환기.genruntimeconfig.cache
+C:\Users\iljae\OneDrive\바탕 화면\DS-3DS_-private_distribution_server\배포파일 변환기\obj\Release\net10.0\win-x64\ref\배포파일 변환기.dll

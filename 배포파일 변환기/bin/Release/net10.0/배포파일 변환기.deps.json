@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "배포파일 변환기/1.0.0": {
+        "dependencies": {
+          "PKHeX.Core": "26.8.26"
+        },
+        "runtime": {
+          "배포파일 변환기.dll": {}
+        }
+      },
+      "PKHeX.Core/26.8.26": {
+        "runtime": {
+          "lib/net10.0/PKHeX.Core.dll": {
+            "assemblyVersion": "26.8.26.0",
+            "fileVersion": "26.8.26.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "배포파일 변환기/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PKHeX.Core/26.8.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4xdfdIb4lSHnxn9lkLdGvXUubsWmSYZjynSe2XQVHYzHR1H/yoRgeoLHlyiJT5TknqrKgLDVvC6pJNO0iq53NA==",
+      "path": "pkhex.core/26.8.26",
+      "hashPath": "pkhex.core.26.8.26.nupkg.sha512"
+    }
+  }
+}

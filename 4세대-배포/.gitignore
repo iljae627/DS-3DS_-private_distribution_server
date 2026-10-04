@@ -1,0 +1,4 @@
+WII_NWC_1_CERT.p12
+certs/
+*.log
+__pycache__/

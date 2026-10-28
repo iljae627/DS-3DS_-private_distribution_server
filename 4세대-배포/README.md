@@ -1,6 +1,6 @@
 # 4세대 사설 배포 서버
 
-첨부받은 일본어 4세대 Wonder Card 한 장을 정품 게임의 `이상한 소포 -> Nintendo WFC로 받기`에서 내려주는 전용 서버다.
+`배포 목록`의 4세대 Wonder Card를 정품 게임의 `이상한 소포 → Nintendo WFC로 받기`에서 내려주는 Windows용 서버다. 문서의 IP 주소는 예시이며, DS에는 서버 시작 화면에 표시되는 실제 DNS 주소를 입력한다.
 
 ## 구성
 
@@ -80,7 +80,7 @@ DS로 식별된 IP의 모든 DNS 이름은 `[NDS-DNS-00]`으로 기록한다. �
 - 같은 Card ID의 수령 기록이 있으면 다시 받지 못할 수 있다.
 - 배달원에게 선물을 받은 뒤 저장해야 한다.
 
-`..\배포파일 변환기`는 현재 **제작 중**이며, 아직 실제 배포용 PCD 생성에 사용하지 않는다.
+`..\4세대-배포파일-변환기`에서 PK4를 PCD로 변환할 수 있으며, 생성한 PCD의 실기 배포와 수령을 확인했다.
 
 ## 진단
 
@@ -109,11 +109,11 @@ Get-NetTCPConnection -LocalPort 80 -ErrorAction SilentlyContinue
 - `MYG = PCD[0x104:0x154] + PCD` 형식
 - Nintendo DLS `/download`의 `count`, `list`, `contents` 작업
 - 정품 게임 SSL 인증은 `nds-constraint` 호환 공개 NAS에 위임
-- WSL NAT 네트워크를 사용하여 Windows 모바일 핫스팟의 ICS DNS와 로컬 서버의 53번 포트를 분리
+- WinDivert를 사용하여 Windows 모바일 핫스팟으로 들어오는 Nintendo/WFC DNS 패킷만 직접 처리
 
-## 설정 복원
+## 이전 WSL 실험 설정 복원
 
-관리자 PowerShell에서 아래를 실행한 뒤 모바일 핫스팟을 껐다가 다시 켠다.
+현재 서버는 WSL을 사용하지 않는다. 과거 `setup-wsl-network.ps1` 실험을 실행한 PC에서만 관리자 PowerShell로 아래 명령을 실행한 뒤 모바일 핫스팟을 다시 켠다.
 
 ```powershell
 .\restore-wsl-network.ps1
@@ -125,3 +125,4 @@ Get-NetTCPConnection -LocalPort 80 -ErrorAction SilentlyContinue
 - https://github.com/KaeruTeam/nds-constraint
 - https://github.com/vixthevix/IVgift
 
+전체 프로젝트 구성과 변환기 사용 순서는 [프로젝트 README](../README.md)를 참고한다.

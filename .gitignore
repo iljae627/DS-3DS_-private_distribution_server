@@ -1,0 +1,5 @@
+/프로젝트_보고서_gitignore/
+/6세대-배포서버/keys/
+/6세대-배포서버/certs/
+/6세대-배포서버/node_modules/
+/6세대-배포서버/__pycache__/

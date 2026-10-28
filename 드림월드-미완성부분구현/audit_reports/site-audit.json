@@ -1,0 +1,1095 @@
+{
+  "pages": [
+    {
+      "path": "/index.html",
+      "status": 200
+    },
+    {
+      "path": "/about/index.html",
+      "status": 200
+    },
+    {
+      "path": "/campaign/index.html",
+      "status": 200
+    },
+    {
+      "path": "/customize/index.html",
+      "status": 200
+    },
+    {
+      "path": "/gbu/index.html",
+      "status": 200
+    },
+    {
+      "path": "/help/index.html",
+      "status": 200
+    },
+    {
+      "path": "/information/index.html",
+      "status": 200
+    },
+    {
+      "path": "/mailer/index.html",
+      "status": 200
+    },
+    {
+      "path": "/maintenance/index.html",
+      "status": 200
+    },
+    {
+      "path": "/pdw/index.html",
+      "status": 200
+    },
+    {
+      "path": "/profile/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/index.html",
+      "status": 200
+    },
+    {
+      "path": "/terms-of-use/index.html",
+      "status": 200
+    },
+    {
+      "path": "/wifi/index.html",
+      "status": 200
+    },
+    {
+      "path": "/wifi/list_ko.html",
+      "status": 200
+    },
+    {
+      "path": "/wifi/entry/entry_ko.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/world/800/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/wi-fi/900/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/report/400/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/page/300/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/page/307/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/mail/600/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/friend/200/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/custom/500/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/cooperation/100/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/campaign/700/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/help/about/000/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/campaign/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/friend/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/login/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/member/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/pgl/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/report/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/soft/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/wi-fi/index.html",
+      "status": 200
+    },
+    {
+      "path": "/support/faq/world/index.html",
+      "status": 200
+    }
+  ],
+  "apis": [
+    {
+      "api": "gbu.journal.season_list",
+      "status": 200
+    },
+    {
+      "api": "gts.journal.trade_list",
+      "status": 200
+    },
+    {
+      "api": "gbu.worldbattle.get_battle_history",
+      "status": 200
+    },
+    {
+      "api": "gts.profile.gts_history",
+      "status": 200
+    },
+    {
+      "api": "hb",
+      "status": 200
+    },
+    {
+      "api": "pdw.croft.my_croft_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.croft.waterpot_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.dreamland.top",
+      "status": 200
+    },
+    {
+      "api": "pdw.dreamland.tree_top",
+      "status": 200
+    },
+    {
+      "api": "pdw.home.board_pokemon_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.home.footprint_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.home.my_bridge",
+      "status": 200
+    },
+    {
+      "api": "pdw.home.campaign_island_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.home.my_island",
+      "status": 200
+    },
+    {
+      "api": "pdw.home.my_island_area",
+      "status": 200
+    },
+    {
+      "api": "pdw.item.item_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.item.item_trade_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.interior.interior_catalog_list",
+      "status": 200
+    },
+    {
+      "api": "pdw.interior.interior_list",
+      "status": 200
+    },
+    {
+      "api": "pgl.journal.census",
+      "status": 200
+    },
+    {
+      "api": "pgl.member.profile.customize",
+      "status": 200
+    },
+    {
+      "api": "pgl.member.profile.gsid_list",
+      "status": 200
+    },
+    {
+      "api": "pgl.member.profile.my_gbu_profile",
+      "status": 200
+    },
+    {
+      "api": "pgl.member.profile.my_pdw_profile_by_pgl",
+      "status": 200
+    },
+    {
+      "api": "pgl.member.profile.my_profile",
+      "status": 200
+    },
+    {
+      "api": "pgl.news.information_list",
+      "status": 200
+    },
+    {
+      "api": "pgl.news.news_list",
+      "status": 200
+    },
+    {
+      "api": "pgl.top.index",
+      "status": 200
+    },
+    {
+      "api": "pgl.top.init",
+      "status": 200
+    }
+  ],
+  "missing": [],
+  "external": [
+    {
+      "page": "/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/faq.asp"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://pokemonkorea.co.kr/pglevent/index.html"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://www.pokemon-gl.com/languages/"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/about/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/campaign/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/customize/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/faq.asp"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://pokemonkorea.co.kr/pglevent/index.html"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://www.pokemon-gl.com/languages/"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/gbu/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/faq.asp"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://pokemonkorea.co.kr/pglevent/index.html"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://www.pokemon-gl.com/languages/"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/information/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/mailer/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/mailer/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/mailer/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/mailer/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/faq.asp"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://pokemonkorea.co.kr/pglevent/index.html"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://www.pokemon-gl.com/languages/"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/maintenance/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/pdw/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://pokemonkorea.co.kr"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/profile/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://get.adobe.com/reader/"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://b2w2.pokemonkorea.co.kr/main.html"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://bw.pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/support/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/terms-of-use/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/browser.asp"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/privacy.asp"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://pokemonkorea.co.kr/pgl/footer/copyright.asp"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://pokemonkorea.co.kr/"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://www.nintendo.co.kr/"
+    },
+    {
+      "page": "/wifi/index.html",
+      "url": "http://www.nintendo.co.kr/DS/soft/wifi/wifi_connection.php"
+    },
+    {
+      "page": "/support/help/index.html",
+      "url": "http://get.adobe.com/reader/"
+    },
+    {
+      "page": "/support/help/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/world/800/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/world/800/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/world/800/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/world/800/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/wi-fi/900/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/wi-fi/900/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/wi-fi/900/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/wi-fi/900/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/report/400/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/report/400/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/report/400/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/report/400/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/page/300/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/page/300/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/page/300/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/page/300/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/page/307/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/page/307/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/page/307/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/page/307/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/mail/600/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/mail/600/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/mail/600/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/mail/600/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/friend/200/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/friend/200/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/friend/200/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/friend/200/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/custom/500/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/custom/500/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/custom/500/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/custom/500/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/cooperation/100/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/cooperation/100/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/cooperation/100/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/cooperation/100/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/campaign/700/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/campaign/700/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/campaign/700/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/campaign/700/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/help/about/000/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/help/about/000/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/help/about/000/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/help/about/000/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/campaign/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/campaign/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/campaign/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/campaign/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/campaign/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/friend/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/friend/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/friend/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/friend/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/friend/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/login/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/login/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/login/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/login/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/login/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/member/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/member/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/member/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/member/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/member/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/pgl/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/pgl/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/pgl/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/pgl/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/pgl/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/report/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/report/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/report/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/report/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/report/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/soft/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/soft/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/soft/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/soft/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/soft/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/wi-fi/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/wi-fi/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/wi-fi/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/wi-fi/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/wi-fi/index.html",
+      "url": "http://www.pokemon.jp/"
+    },
+    {
+      "page": "/support/faq/world/index.html",
+      "url": "https://www.pokemon.jp/form/inquiry/"
+    },
+    {
+      "page": "/support/faq/world/index.html",
+      "url": "http://www.nintendo.co.jp/netinfo/index.html"
+    },
+    {
+      "page": "/support/faq/world/index.html",
+      "url": "http://www.nintendo.co.jp/"
+    },
+    {
+      "page": "/support/faq/world/index.html",
+      "url": "http://www.pokemon.co.jp/"
+    },
+    {
+      "page": "/support/faq/world/index.html",
+      "url": "http://www.pokemon.jp/"
+    }
+  ],
+  "missing_illustrations": [
+    "/support/help/ja/800c.png",
+    "/support/assets/ja/images/manual/h2_img02.gif",
+    "/support/help/ja/400a.png",
+    "/support/assets/ja/images/manual/page.gif",
+    "/support/assets/ja/images/manual/h2_img02.gif",
+    "/support/assets/ja/images/manual/page.gif",
+    "/support/help/ja/307a.png",
+    "/support/help/ja/307b.png",
+    "/support/help/ja/307c.png",
+    "/support/help/ja/200b.png",
+    "/support/help/ja/500a.png",
+    "/support/assets/ja/images/manual/cooperation.gif",
+    "/support/help/ja/100b.png",
+    "/support/help/ja/100d.png",
+    "/support/assets/ja/images/manual/h2_img02.gif",
+    "/support/help/ja/700a.png",
+    "/support/assets/ja/images/manual/h2_img02.gif"
+  ],
+  "resources_checked": 659,
+  "unavailable_decorations": [
+    "/support/assets/ja/images/manual/list_photo11_over.jpg",
+    "/support/assets/ja/images/manual/list_photo12_over.jpg",
+    "/support/assets/ja/images/manual/list_photo13_over.jpg",
+    "/support/assets/ja/images/manual/ul_bg.jpg"
+  ]
+}

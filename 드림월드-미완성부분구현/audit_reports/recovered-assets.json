@@ -1,0 +1,164 @@
+[
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/css/qa.css",
+    "source": "Global Link/Black and White/languages/ja.pokemon-gl.com/support/assets/ja/css/qa.css",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "f72f7200b79f15d4a2e7d9a4a5251c42ee8be6a57557218f0d09fa898b116c93"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/about.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/about.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "692529b14f531c3f1ba040ab17711e87360d13934549155a1c55940eab2807eb"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/campaign.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/campaign.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "4219b003ca2369ff88f0de6607a27c6a60176946fcdc640ad0e2e0812e7aa676"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/custom.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/custom.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "f0b918425f1b1274479d4ac2aeb4bf4dbb0f987ca1d350485af3b8f8df747246"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/friend.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/friend.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "57643c5cff55446f19a74ce7ceb2b2bcd430449c7ceae34db88702eff8ee30e2"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/imgtext02.jpg",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/imgtext02.jpg",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "49b552d8dcb37a1e3ea719d45a17e42cd6966b5db4a94c679aa82de0124be488"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/mail.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/mail.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "63910117397e652421fcf18cc79736dea743fba71577bfcccaabbaa9c346f5f8"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/report.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/report.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "7f8e558b557e84b05e0a5da26f912009a61c979bf1dc77e6afd8231817bf77ec"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/images/manual/world.gif",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/assets/de/images/manual/world.gif",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "5b0b51f2c2cddd152ae53aded2bc1e24d08e6bd6e787ec21274ea68177699a50"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/js/jquery.ez-bg-resize.min.js",
+    "source": "Global Link/Black and White/global/support/assets/en/js/jquery.ez-bg-resize.min.js",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "0adafea4d227899148c2a42fb377a3f2491ca5c7f177529aa6aec628f2990a1c"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/js/jquery.min.js",
+    "source": "Global Link/restored-site-domains/ko.pokemon-gl.com/support/assets/ko/js/jquery.min.js",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "aeac699b2656c6a62fd91120ec2405d724882c5cb024a51c87e3094e3d29a3de"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ja/js/local.min.js",
+    "source": "Global Link/Black and White/global/support/assets/en/js/local.min.js",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "1e2c3d520a9f5061795b75e1a2c989b3bf049bfd3b2e66b97b867b9f46486a82"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ko/js/jquery.ez-bg-resize.min.js",
+    "source": "Global Link/Black and White/global/support/assets/en/js/jquery.ez-bg-resize.min.js",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "0adafea4d227899148c2a42fb377a3f2491ca5c7f177529aa6aec628f2990a1c"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ko/js/jquery.min.js",
+    "source": "Global Link/restored-site-domains/ko.pokemon-gl.com/support/assets/ko/js/jquery.min.js",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "aeac699b2656c6a62fd91120ec2405d724882c5cb024a51c87e3094e3d29a3de"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/assets/ko/js/local.min.js",
+    "source": "Global Link/Black and White/global/support/assets/en/js/local.min.js",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "1e2c3d520a9f5061795b75e1a2c989b3bf049bfd3b2e66b97b867b9f46486a82"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/000b.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/000b.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "1f458a38e55e8b7418c1138212aa0683170bd2c88b24dee207a8072a83f7babd"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/000c.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/000c.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "ac4b8b05f8cd34fcbe58c1176b3702d5dc83587eb9f219744c098494692386fa"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/000d.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/000d.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "08c86689af4f775ca239a3a523dfe2d61150f2bd5273067f5a029021fcd94f47"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/100a.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/100a.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "82c9312b2aac04381abb261f3a0ff9d668784cd877ceddfde72fb8aa709eae4a"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/100c.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/100c.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "d3019b928ef296833201cfc2c4c55014f2294c9decb43f992ec206da44e06790"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/200c.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/200c.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "7a825d1e94757541938e16f9540f1d315c785fb365cd8da8affbd201e3e75d29"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/300a.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/300a.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "3a8be7a20804651f4d10689eb31942a8c4cb81a5590600421a56e9cf3f5e6a03"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/600a.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/600a.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "25786574088e0644444c4246536290d169a7ab6746cbba7e474833d735ddc342"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/800a.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/800a.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "7c255c6ee96be6597b5e8e4a6bf200687fea12b13137aad1011acbbf3244f108"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/support/help/ja/800b.png",
+    "source": "Global Link/Black and White/languages/de.pokemon-gl.com/support/help/de/800b.png",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "a95422586c72409f864a184a6b6cea1536f13da48ebf24297f7e08524f84bbbf"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/src/swf/theme/assets/global/parts/interior/catalogimg_1.swf",
+    "source": "Completed Assets/Catalogue, Decor and Plushies/Catalogue/catalogimg_1.swf",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "20c03e4d673c1e637482b816307dd5765dfca15c83da2dc39604a0427c76ab65"
+  },
+  {
+    "local": "dreamworld_assets/shared.pokemon-gl.com/src/swf/theme/assets/global/parts/interior/301.swf",
+    "source": "File Extraction/301/301.swf",
+    "commit": "36e3c302d4ba3f79886efccb731c5e4e65143341",
+    "sha256": "131c454fb385e0b391c84e190a37badb3b539bc8a6fdc036c14c23378ea9de9e"
+  }
+]

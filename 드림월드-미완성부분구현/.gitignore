@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+*.log
+
+save_data/
+tools/
+!tools/
+tools/*
+!tools/audit_site.py
+!tools/recover_assets.py
+.research/

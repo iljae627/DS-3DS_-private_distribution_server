@@ -1,0 +1,6 @@
+[submodule "game_sync_server"]
+	path = game_sync_server
+	url = https://github.com/minibug1021/game-sync-python.git
+[submodule "dreamworld_assets"]
+	path = dreamworld_assets
+	url = https://github.com/minibug1021/dreamworld-assets.git

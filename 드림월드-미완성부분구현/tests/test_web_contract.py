@@ -62,6 +62,40 @@ assert client.get('/missing-does-not-exist.swf').status_code==404
 assert client.get('/%2e%2e/config.py').status_code==404
 ''')
 
+    def test_archive_navigation_and_image_detail(self):
+        self.run_probe(r'''
+import re
+for path in ('/local/pages','/local/gallery?q=support/help&lang=ja','/local/gallery?page=999999','/help/404/','/support/help/report/404/','/support/faq/campaign/404','/about/campaign/','/gus.pokemon.com/en/','/www.pokemon-gl.com/languages/'):
+    r=client.get(path,follow_redirects=True)
+    assert r.status_code==200,(path,r.data[:200])
+page=client.get('/support/help/report/404/').data
+assert b'href="/help/400/"' in page and b'href="/help/assets/' in page
+assert b'/local/archive.css' in page
+gallery=client.get('/local/gallery?q=support/help&lang=ja').data.decode()
+key=re.search(r'/local/gallery/([a-f0-9]{20})',gallery)[1]
+assert client.get('/local/gallery/'+key).status_code==200
+image=client.get('/local/image/'+key)
+assert image.status_code==200 and image.content_type.startswith('image/') and len(image.data)>100
+assert client.get('/local/image/no-such-image').status_code==404
+assert client.get('/local/gallery?page=oops').status_code==400
+assert client.get('/help/assets/en/images/404/img00.png').status_code==404
+assert client.get('/theme/assets/js/jquery.corner.js').status_code==200
+from api.help_guides import TOPICS
+for topic in TOPICS:
+    assert client.get('/local/guide/'+topic).status_code==200
+    r=client.get('/local/guide/'+topic+'.svg')
+    assert r.content_type.startswith('image/svg+xml') and r.headers.get('X-PDW-Reconstructed')
+old=client.get('/help/404/').data
+assert b'<iframe id="gus"' not in old
+assert b'google-analytics.com' not in old
+assert b'data-pdw-missing=' in old and b'/local/guide/' in old
+assert client.post('/local/customize',data={'cgear':'../../not-a-file'}).status_code==400
+for path in ('/customize/index.html','/languages/','/register/','/faq/js/common.js','/faq/common/css/base_style.css','/renewal2012/styles/contents.css','/pre/theme/assets/en/css/lang.css'):
+    assert client.get(path,follow_redirects=True).status_code==200,path
+faq=client.get('/faq/faq_category_id=1.html').get_data(as_text=True)
+assert 'charset=utf-8' in faq and 'よくある' in faq
+''')
+
     def test_real_result_hash_failure_replay_and_restart(self):
         self.run_probe(r'''
 top=get('pdw.dreamland.top').get_json()

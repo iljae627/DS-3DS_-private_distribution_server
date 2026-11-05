@@ -95,10 +95,15 @@ def apply_substitutions(data: bytes, filename: str) -> bytes:
     if filename == 'pgl.js':
         data = data.replace(b"$(this).attr('href').match(/(\\w\\w)\\./)[1]", b"PGL.language")
         data = data.replace(b"href:'http://' + location.hostname.replace(/\\w\\w\\./, lang + '.')", b"href:'/'")
+        data = re.sub(rb"(?m)^\s*\$\('body'\)\.css\(\{ 'padding-top':56 \}\)\.prepend[^\r\n]+", b"", data)
     if filename.endswith('.html'):
+        # 종료된 외부 로그인 프레임과 과거 통계 스크립트는 로컬 실행에 불필요하다.
+        data = re.sub(rb'<iframe\b[^>]*\bid=[\x22\x27]gus[\x22\x27][^>]*>.*?</iframe>', b'', data, flags=re.S|re.I)
+        data = re.sub(rb'\(function\s*\(\)\s*\{\s*var ga\b.*?\}\)\(\);', b'', data, flags=re.S)
         # These archive-only mocks were never shipped and would bypass the real API.
         data = re.sub(rb'<script\b[^>]*src=[\x22\x27][^\x22\x27]*_restore/[^\x22\x27]+[\x22\x27][^>]*>\s*</script>', b'', data)
         data = data.replace(b'</body>', b'<script src="/local/client.js"></script></body>')
+        data = data.replace(b'</head>', b'<link rel="stylesheet" href="/local/archive.css"></head>')
     return data
 
 # ---------------

@@ -1,0 +1,52 @@
+{
+  "folders": {
+    "드림월드": {
+      "git_missing": [],
+      "upstream": [
+        {
+          "repo": "minibug1021/dreamworld-reawakened",
+          "commit": "44bb9a23e6fc499c07121cacb6648b49e3ba7ccc",
+          "files": 125,
+          "missing": []
+        },
+        {
+          "repo": "minibug1021/dreamworld-assets",
+          "commit": "ff45b55ac0adb8308f5bdd9ae750675f24d4604c",
+          "files": 10464,
+          "missing": []
+        },
+        {
+          "repo": "minibug1021/game-sync-python",
+          "commit": "9b7d90f8e5946cd05e9115dc83ac4bb30a08bd60",
+          "files": 97,
+          "missing": []
+        }
+      ]
+    },
+    "드림월드-미완성부분구현": {
+      "git_missing": [],
+      "upstream": [
+        {
+          "repo": "minibug1021/dreamworld-reawakened",
+          "commit": "44bb9a23e6fc499c07121cacb6648b49e3ba7ccc",
+          "files": 125,
+          "missing": []
+        },
+        {
+          "repo": "minibug1021/dreamworld-assets",
+          "commit": "ff45b55ac0adb8308f5bdd9ae750675f24d4604c",
+          "files": 10464,
+          "missing": []
+        },
+        {
+          "repo": "minibug1021/game-sync-python",
+          "commit": "9b7d90f8e5946cd05e9115dc83ac4bb30a08bd60",
+          "files": 97,
+          "missing": []
+        }
+      ]
+    }
+  },
+  "restored": [],
+  "backup": "C:\\Users\\iljae\\OneDrive\\바탕 화면\\DS-3DS_-private_distribution_server\\드림월드-복구도구\\backups\\20261105-092915"
+}

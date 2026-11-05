@@ -8,4 +8,5 @@ tools/
 tools/*
 !tools/audit_site.py
 !tools/recover_assets.py
+!tools/audit_links.py
 .research/

@@ -6,6 +6,11 @@ from game_sync_server.entralinked.utility.db_manager import db
 local = Blueprint("local", __name__, url_prefix="/local")
 
 
+@local.errorhandler(ValueError)
+def invalid_form(error):
+    return render_template_string('<!doctype html><html lang="ko"><meta charset="utf-8"><title>입력 확인</title><h1>입력을 확인하세요</h1><p>{{message}}</p><a href="/local/customize">커스터마이즈로 돌아가기</a></html>', message=str(error)), 400
+
+
 @local.route("/customize", methods=["GET", "POST"])
 def customize():
     from api.customization import options, current, select
@@ -17,7 +22,7 @@ def customize():
 <main><h1>드림월드 커스터마이즈</h1><a href="/local/">이용 안내로 돌아가기</a>
 <p>복구된 로컬 선택 화면입니다. 설치된 콘텐츠를 선택하면 게임싱크 전송 예약에 저장합니다. 포켓몬을 재운 다음 선택하고, 정상 종료 후 깨우세요.</p>
 {% if saved %}<p role="status">선택을 저장했습니다. 다음 게임싱크 다운로드에 반영됩니다.</p>{% endif %}
-<form method="post">{% for key, label in labels.items() %}<label>{{label}}<select name="{{key}}"><option value="">변경하지 않음</option>{% for name in choices[key] %}<option value="{{name}}" {% if selected[key]==name %}selected{% endif %}>{{name}}</option>{% endfor %}</select></label>{% endfor %}<button type="submit">전송 예약 저장</button></form></main></html>''', choices=options(), selected=current(), labels={"cgear":"C기어 스킨", "pokedex":"도감 스킨", "musical":"뮤지컬"}, saved=request.args.get("saved") == "1")
+<p>“전송 예약 없음”을 선택하면 해당 항목의 기존 전송 예약을 취소합니다.</p><form method="post">{% for key, label in labels.items() %}<label>{{label}}<select name="{{key}}"><option value="">전송 예약 없음</option>{% for name in choices[key] %}<option value="{{name}}" {% if selected[key]==name %}selected{% endif %}>{{name}}</option>{% endfor %}</select></label>{% endfor %}<button type="submit">전송 예약 저장</button></form></main></html>''', choices=options(), selected=current(), labels={"cgear":"C기어 스킨", "pokedex":"도감 스킨", "musical":"뮤지컬"}, saved=request.args.get("saved") == "1")
 
 
 def status():
@@ -45,7 +50,7 @@ def help_page():
     return render_template_string('''<!doctype html><html lang="ko"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>드림월드 이용 안내</title>
 <style>body{font:17px/1.8 system-ui,sans-serif;background:#eef6fa;color:#243b48;margin:0}main{max-width:820px;margin:36px auto;padding:32px;background:white;border-radius:18px}a{color:#166a91}nav{display:flex;gap:20px;flex-wrap:wrap}h1{font-size:28px}code{background:#edf3f5;padding:4px}li{margin-bottom:10px}.status{padding:18px;background:#e8f6ec;border-radius:8px}</style>
-<main><h1>드림월드 이용 안내</h1><nav><a href="/">PGL 홈</a><a href="/pdw/">드림월드</a><a href="/profile/">마이페이지</a><a href="/local/customize">커스터마이즈</a><a href="/support/">보관된 도움말</a></nav>
+<main><h1>드림월드 이용 안내</h1><nav><a href="/">PGL 홈</a><a href="/pdw/">드림월드</a><a href="/profile/">마이페이지</a><a href="/local/customize">커스터마이즈</a><a href="/support/">보관된 도움말</a><a href="/local/pages">전체 페이지</a><a href="/local/gallery">원본 이미지 자료실</a><a href="/local/guide/start">단계별 사용 방법</a></nav>
 <p class="status">현재 상태: {% if not s.registered %}게임싱크 계정을 먼저 등록하세요.{% elif s.sleeping %}포켓몬이 잠들어 있습니다. 드림월드에 입장할 수 있습니다.{% else %}포켓몬이 깨어 있습니다. 게임에서 먼저 포켓몬을 재우세요.{% endif %}</p>
 <ol><li>서버 실행창을 열어 둔 채 게임의 C기어 → 온라인 → 게임싱크에서 포켓몬을 재웁니다.</li>
 <li>Flash가 실행되는 Basilisk에서 <a href="/pdw/">드림월드</a>를 엽니다. Chrome·Edge는 원본 Flash 게임을 실행하지 못합니다. 독립 Flash Player에서는 <a href="/src/swf/theme/assets/common/main.swf">main.swf</a>를 열 수 있습니다.</li>
@@ -62,6 +67,8 @@ def help_page():
 def client_script():
     return Response('''(function(){
 var flash=false;try{flash=!!(navigator.mimeTypes&&navigator.mimeTypes['application/x-shockwave-flash']);}catch(e){}
+var nav=document.createElement('nav');nav.id='pdw-local-nav';nav.innerHTML='<a href="/local/">로컬 이용 안내</a><a href="/local/pages">전체 페이지</a><a href="/local/gallery">원본 이미지 자료실</a>';document.body.insertBefore(nav,document.body.firstChild);
+document.addEventListener('click',function(e){var img=e.target;if(!img||img.tagName!=='IMG'||img.closest('a')||img.hasAttribute('usemap')||!img.naturalWidth||img.naturalWidth<30)return;var d=document.createElement('dialog');if(!d.showModal)return;d.className='pdw-image-dialog';var c=document.createElement('button');c.textContent='닫기';c.onclick=function(){d.close();d.parentNode.removeChild(d);};var large=document.createElement('img');large.src=img.currentSrc||img.src;large.alt=img.alt||'원본 상세 이미지';d.appendChild(c);d.appendChild(large);d.addEventListener('close',function(){if(d.parentNode)d.parentNode.removeChild(d);});document.body.appendChild(d);d.showModal();});
 if(!flash){var box=document.createElement('div');box.style.cssText='position:relative;z-index:99999;padding:16px;background:#fff3cf;color:#253844;font:16px/1.6 sans-serif;text-align:center';box.innerHTML='원본 드림월드는 Flash 실행 환경이 필요합니다. <a href="/local/">입장 방법·현재 게임싱크 상태 확인</a>';document.body.insertBefore(box,document.body.firstChild);}
 if(/^\/(report|wifi|campaign)\//.test(location.pathname)){var note=document.createElement('p');note.style.cssText='position:relative;z-index:99999;background:#fff3cf;color:#253844;padding:12px;text-align:center';note.innerHTML='보관된 PGL 화면입니다. 리포트의 예시 데이터와 옛 공식 대회·캠페인은 실제 온라인 서비스에 연결되지 않습니다. <a href="/local/">현재 이용 가능한 기능</a>';document.body.insertBefore(note,document.body.firstChild);}
 }());''', content_type="application/javascript")

@@ -3,6 +3,7 @@ import os
 import atexit
 import logging
 import mimetypes
+from functools import lru_cache
 from pathlib import Path
 import json
 from werkzeug.exceptions import HTTPException
@@ -16,6 +17,8 @@ from utils.patch_file import apply_substitutions, get_cached, SWF_PATHS
 from game_sync_server.entralinked.utility.db_manager import db
 from api.routes import GET_RESPONSES, POST_RESPONSES
 from api.local_pages import local
+from api.archive import archive
+from api.help_guides import guides, topic_for
 
 # ---------------
 # Config
@@ -35,6 +38,30 @@ SHARED_DIR = ROOT_DIR / "dreamworld_assets" / "shared.pokemon-gl.com"
 PATCHABLE_EXTENSIONS = {".js", ".html", ".css"}
 UNAVAILABLE_DECORATIONS = set()
 
+
+@lru_cache(maxsize=512)
+def legacy_asset(relative):
+    """옛 매뉴얼의 번호별 이미지가 다른 보관 위치에 있는 경우 연결한다."""
+    match = re.fullmatch(r"help/assets/(ja|en|fr|it|de|es|ko)/images/(.+)", relative)
+    if not match:
+        return None
+    for language in dict.fromkeys((match[1], "en", "ja", "de", "fr", "it", "es")):
+        candidate = legacy_asset_index().get((language, match[2]))
+        if candidate:
+            return candidate
+    return None
+
+
+@lru_cache(maxsize=1)
+def legacy_asset_index():
+    result = {}
+    for root in sorted((ROOT_DIR / "dreamworld_assets").glob("*.pokemon-gl.com/support")):
+        for path in sorted(root.rglob("*")):
+            match = re.search(r"/assets/(ja|en|fr|it|de|es|ko)/images/(.+)$", path.as_posix())
+            if match and path.is_file() and path.stat().st_size > 100:
+                result.setdefault((match[1], match[2]), path)
+    return result
+
 NO_CACHE_HEADERS = {
     "Cache-Control": "no-cache, no-store, must-revalidate",
     "Pragma": "no-cache",
@@ -47,6 +74,8 @@ NO_CACHE_HEADERS = {
 
 app = Flask(__name__)
 app.register_blueprint(local)
+app.register_blueprint(archive)
+app.register_blueprint(guides)
 app.logger.setLevel(logging.INFO)
 
 # ---------------
@@ -55,10 +84,20 @@ app.logger.setLevel(logging.INFO)
 
 def read_and_patch(file_path: Path) -> bytes:
     data = file_path.read_bytes()
+    if file_path.suffix.lower() in PATCHABLE_EXTENSIONS:
+        try:
+            data.decode("utf-8")
+        except UnicodeDecodeError:
+            # 일부 초기 FAQ와 스타일은 Shift_JIS로 보관됐다.
+            data = data.decode("cp932", errors="replace").encode("utf-8")
+        data = re.sub(rb'(?i)(charset\s*=\s*[\x22\x27]?)(?:shift[_-]jis|windows-31j)', rb'\1utf-8', data)
 
     if file_path.suffix.lower() in PATCHABLE_EXTENSIONS:
         data = apply_substitutions(data, file_path.name)
-    if file_path.suffix.lower() == ".html" and "/support/" in request.path:
+    if file_path.suffix.lower() == ".html" and b'id="help-content"' in data:
+        # 옛 도움말이 다른 디렉터리에 중복 보관되어도 원래 루트로 연결한다.
+        data = re.sub(rb'((?:href|src)=[\x22\x27])\.\./', rb'\1/help/', data)
+    if file_path.suffix.lower() == ".html" and ("/support/" in request.path or request.path.startswith("/help/")):
         def archived_image(match):
             markup = match[0].decode("utf-8")
             source = re.search(r'\bsrc=[\x22\x27]([^\x22\x27]+)', markup)
@@ -68,9 +107,12 @@ def read_and_patch(file_path: Path) -> bytes:
             if url.netloc != request.host or resolve_static(unquote(url.path)):
                 return match[0]
             missing = escape(url.path, quote=True)
-            return (f'<span data-pdw-missing="{missing}" style="display:inline-block;padding:10px;background:#fff3cf;color:#35424a">보관본에 이 설명 그림이 없습니다. <a href="/local/help">로컬 이용 안내 보기</a></span>').encode()
+            topic = topic_for(request.path)
+            if any(name in url.path for name in ("h2_img", "manual/page.gif", "manual/cooperation.gif")):
+                return (f'<span data-pdw-missing="{missing}"><a href="/local/guide/{topic}">관련 사용 방법 (로컬 재구성)</a></span>').encode()
+            return (f'<span data-pdw-missing="{missing}" style="display:inline-block;max-width:100%;padding:8px;background:#fff3cf;color:#35424a"><a href="/local/guide/{topic}"><img src="/local/guide/{topic}.svg" alt="로컬 사용 순서 재구성 — 원본 스크린샷 아님" style="width:360px;max-width:100%;height:auto"></a><br>원본 그림 미보관 · 로컬 사용 안내로 대체했습니다.</span>').encode()
         data = re.sub(rb'<img\b[^>]*>', archived_image, data, flags=re.I)
-    if file_path.suffix.lower() == ".css" and request.path.startswith("/support/"):
+    if file_path.suffix.lower() == ".css":
         def decorative_image(match):
             source = match[1].decode("utf-8", errors="replace")
             url = urlsplit(urljoin(request.url, source))
@@ -88,6 +130,14 @@ def read_and_patch(file_path: Path) -> bytes:
 
 def send_file(file_path: Path) -> Response:
     data = read_and_patch(file_path)
+    if file_path.suffix.lower() == ".html" and b"AUTO-GENERATED PGL STUB" in data:
+        from api.archive import render
+        from api.help_guides import TOPICS
+        topic = topic_for(request.path)
+        title, steps, notes = TOPICS[topic]
+        html = render('''<!-- AUTO-GENERATED PGL STUB: original page unavailable; local guide follows -->
+<h1>{{title}}</h1><p class="note" data-pdw-reconstructed="true">이 경로의 원본 본문은 공개 보관본에 없고 임시 페이지로 남아 있습니다. 빈 화면 대신 현재 서버의 사용 방법을 표시합니다. 옛 공식 서비스를 복구한 화면은 아닙니다.</p><code>{{path}}</code><img class="detail" src="/local/guide/{{topic}}.svg" alt="로컬 사용 순서 재구성"><ol>{% for note in notes %}<li>{{note}}</li>{% endfor %}</ol><p><a href="/local/guide/{{topic}}">자세한 로컬 사용 방법</a></p>''', title=title, path=request.path, topic=topic, notes=notes)
+        return Response(html, content_type="text/html", headers={"X-PDW-Reconstructed": "local-guide-not-original"})
     content_type, _ = mimetypes.guess_type(file_path)
     return Response(data, content_type=content_type or "application/octet-stream")
 
@@ -97,11 +147,16 @@ def send_bytes(data: bytes, content_type: str) -> Response:
 
 def resolve_static(path: str) -> Path | None:
     """Return the filesystem path for a static asset, checking site dir, then shared dir as a fallback."""
-    relative = re.sub(r"^/(?:cdn2?|shared|ja|en|fr|it|de|es|ko)\.pokemon-gl\.com/?", "/", path).lstrip("/")
+    relative = re.sub(r"^/(?:cdn2?|shared|www|ja|en|fr|it|de|es|ko)\.pokemon-gl\.com/?", "/", path).lstrip("/")
     if relative == "assets/global/images/dialog-close.png":
         relative = "src/swf/assets/global/images/dialog-close.png"
+    if relative == "theme/assets/js/jquery.corner.js":
+        relative = "assets/global/js/jquery.corner.js"
     if ".." in Path(relative).parts or "\\" in relative or ":" in relative:
         return None
+    recovered = legacy_asset(relative)
+    if recovered:
+        return recovered
 
     # site-specific first
     site_path = SITE_DIR / relative
@@ -153,15 +208,29 @@ def not_found(path: str) -> Response:
 def rewrite_incoming_path():
     """Apply path rewrites and enforce trailing slash on directory paths."""
     path = request.path
-    if path.rstrip("/") == "/customize":
+    if re.fullmatch(r"/pre/theme/assets/(?:de|en|es|fr)/css/lang\.css", path) or path == "/pre/theme/assets/css/theme.css":
+        return redirect("/local/legacy.css", 302)
+    if path.startswith(("/register/", "/pgl-363/")) and (path.endswith("/") or path.endswith(".html")):
+        return redirect("/local/guide/start", 302)
+    if path.rstrip("/") in ("/register", "/languages", "/languages/index.html"):
+        return redirect("/local/pages", 302)
+    if path in ("/faq/js/common.js", "/faq/css/css.js", "/faq/js/putFooter.js", "/renewal2012/js/rollover.js"):
+        return redirect("/local/legacy.js", 302)
+    if path == "/faq/common/css/base_style.css" or re.fullmatch(r"/renewal2012/styles/contents(?:_kinomi|_profile|_service)?\.css", path):
+        return redirect("/local/legacy.css", 302)
+    if path.startswith("/gus.pokemon.com/") or path == "/www.pokemon-gl.com/languages/":
+        return redirect("/local/", 302)
+    if path.rstrip("/") == "/about/campaign":
+        return redirect("/campaign/", 302)
+    if path.rstrip("/") in ("/customize", "/customize/index.html"):
         return redirect("/local/customize", 302)
-    canonical = re.sub(r"^/(?:cdn2?|shared|ja|en|fr|it|de|es|ko)\.pokemon-gl\.com/?", "/", path)
+    canonical = re.sub(r"^/(?:cdn2?|shared|www|ja|en|fr|it|de|es|ko)\.pokemon-gl\.com/?", "/", path)
     if canonical != path:
         query = request.query_string.decode()
         return redirect(canonical + ("?" + query if query else ""), 302)
 
     # enforce trailing slash for paths that map to a site directory
-    if not path.endswith("/") and (SITE_DIR / path.lstrip("/")).is_dir():
+    if not path.endswith("/") and any((root / path.lstrip("/")).is_dir() for root in (SITE_DIR, ROOT_DIR / "dreamworld_assets/en.pokemon-gl.com", ROOT_DIR / "dreamworld_assets/ja.pokemon-gl.com")):
         return redirect(f"{path}/", 301)
 
 
